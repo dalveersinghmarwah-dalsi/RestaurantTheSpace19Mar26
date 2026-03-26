@@ -118,7 +118,7 @@ export default function Home() {
       </motion.section>
 
       {/* Venue Showcase */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-white border-b-4 border-amber-400/60">
         <div className="container">
           <ScrollRevealSection>
             <div className="text-center mb-16">
@@ -288,7 +288,7 @@ export default function Home() {
       </section>
 
       {/* How It Works */}
-      <section className="section-padding bg-gradient-warm">
+      <section className="section-padding bg-gradient-warm border-b-4 border-amber-400/60">
         <div className="container">
           <ScrollRevealSection>
             <div className="text-center mb-16">
@@ -357,7 +357,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-white border-b-4 border-amber-400/60">
         <ScrollRevealSection>
           <div className="container text-center">
             <motion.h2
