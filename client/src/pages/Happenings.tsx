@@ -1,16 +1,24 @@
 import { Calendar, Clock, Users, Ticket } from 'lucide-react';
-import { EVENTS, VENUE_INFO } from '@shared/constants';
+import { EVENTS, VENUE_INFO, ASSETS } from '@shared/constants';
 
 export default function Happenings() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="section-padding bg-gradient-warm border-b border-amber-100">
-        <div className="container text-center animate-fadeInUp">
-          <h1 className="text-5xl sm:text-6xl font-bold text-foreground mb-6">
+      <section
+        className="section-padding border-b border-amber-100 relative overflow-hidden"
+        style={{
+          backgroundImage: `url(${ASSETS.happeningsHeroBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
+        <div className="container text-center animate-fadeInUp relative z-10">
+          <h1 className="text-5xl sm:text-6xl font-bold text-white mb-6">
             The Space Happenings
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-gray-100 max-w-2xl mx-auto">
             Join us for exciting events and unforgettable experiences
           </p>
         </div>
@@ -18,7 +26,7 @@ export default function Happenings() {
 
       {/* Events Grid */}
       <section className="section-padding">
-        <div className="container">
+        <div className="container px-12 sm:px-16 lg:px-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {EVENTS.map((event, index) => (
               <div
@@ -83,7 +91,7 @@ export default function Happenings() {
 
       {/* Upcoming Events Notice */}
       <section className="section-padding bg-gradient-to-b from-slate-50 to-white">
-        <div className="container">
+        <div className="container px-12 sm:px-16 lg:px-20">
           <div className="max-w-3xl mx-auto text-center animate-fadeInUp">
             <div className="bg-white p-8 rounded-2xl shadow-elegant-lg border-2 border-amber-100">
               <h2 className="text-3xl font-bold text-foreground mb-4">More Events Coming Soon</h2>
@@ -105,7 +113,7 @@ export default function Happenings() {
 
       {/* Host Your Event */}
       <section className="section-padding bg-white">
-        <div className="container">
+        <div className="container px-12 sm:px-16 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-slideInLeft">
               <h2 className="text-4xl font-bold text-foreground mb-6">

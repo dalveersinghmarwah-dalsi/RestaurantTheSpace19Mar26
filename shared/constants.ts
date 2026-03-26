@@ -5,6 +5,11 @@ export const ASSETS = {
   theSpaceMain: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663221776678/NM2PPmxQAC9wMDr4g3eSwj/the_space_main_375ceefa.webp',
   theSpaceBelowMain: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663221776678/NM2PPmxQAC9wMDr4g3eSwj/the_space_below_main_caffe02b.webp',
   happeningsHeroBg: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663221776678/NM2PPmxQAC9wMDr4g3eSwj/happenings_hero_bg_18dbfef9.webp',
+  whatsIncludedHeroBg: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663457170221/hTxZcErRVTsbUdcD.jpg',
+  pricingHeroBg: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663457170221/XbySExLMTvoDWFbJ.jpg',
+  addOnsHeroBg: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663457170221/YctNATaEhyKsSKqG.jpg',
+  resourcesHeroBg: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663457170221/RVUkpnZCtCpYaiCf.jpg',
+  contactHeroBg: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663457170221/cVGcUMNrfcZQQkEv.jpg',
 };
 
 // Venue Information

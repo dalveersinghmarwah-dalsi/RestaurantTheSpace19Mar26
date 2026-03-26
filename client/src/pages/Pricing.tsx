@@ -1,16 +1,24 @@
 import { Check, AlertCircle } from 'lucide-react';
-import { PRICING, VENUE_INFO } from '@shared/constants';
+import { PRICING, VENUE_INFO, ASSETS } from '@shared/constants';
 
 export default function Pricing() {
   return (
     <div className="min-h-screen bg-gradient-cool">
       {/* Hero */}
-      <section className="section-padding bg-white border-b border-amber-100">
-        <div className="container text-center animate-fadeInUp">
-          <h1 className="text-5xl sm:text-6xl font-bold text-foreground mb-6">
+      <section
+        className="section-padding border-b border-amber-100 relative overflow-hidden"
+        style={{
+          backgroundImage: `url(${ASSETS.pricingHeroBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
+        <div className="container text-center animate-fadeInUp relative z-10">
+          <h1 className="text-5xl sm:text-6xl font-bold text-white mb-6">
             Pricing
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-gray-100 max-w-2xl mx-auto">
             Skip the sky-high rental fees. Our goal is to make hosting easy, stylish, and affordable.
           </p>
         </div>
@@ -18,7 +26,7 @@ export default function Pricing() {
 
       {/* The Space Pricing */}
       <section className="section-padding">
-        <div className="container">
+        <div className="container px-12 sm:px-16 lg:px-20">
           <div className="mb-12 animate-fadeInUp">
             <h2 className="text-4xl font-bold text-foreground mb-2">Rates For The Space</h2>
             <p className="text-lg text-muted-foreground">Bright, open, and adaptable</p>
@@ -97,7 +105,7 @@ export default function Pricing() {
 
       {/* The Space Below Pricing */}
       <section className="section-padding bg-white border-t border-amber-100">
-        <div className="container">
+        <div className="container px-12 sm:px-16 lg:px-20">
           <div className="mb-12 animate-fadeInUp">
             <h2 className="text-4xl font-bold text-foreground mb-2">Rates For The Space Below</h2>
             <p className="text-lg text-muted-foreground">A warm, speakeasy-inspired setting</p>
@@ -167,7 +175,7 @@ export default function Pricing() {
 
       {/* Discounts Section */}
       <section className="section-padding bg-gradient-to-r from-amber-50 to-orange-50">
-        <div className="container">
+        <div className="container px-12 sm:px-16 lg:px-20">
           <div className="max-w-3xl mx-auto text-center animate-fadeInUp">
             <h2 className="text-4xl font-bold text-foreground mb-8">Special Discounts</h2>
             <div className="bg-white p-8 rounded-2xl shadow-elegant-lg">

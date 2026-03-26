@@ -1,15 +1,23 @@
-import { ADDONS, VENUE_INFO } from '@shared/constants';
+import { ADDONS, VENUE_INFO, ASSETS } from '@shared/constants';
 
 export default function AddOns() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="section-padding bg-gradient-warm border-b border-amber-100">
-        <div className="container text-center animate-fadeInUp">
-          <h1 className="text-5xl sm:text-6xl font-bold text-foreground mb-6">
+      <section
+        className="section-padding border-b border-amber-100 relative overflow-hidden"
+        style={{
+          backgroundImage: `url(${ASSETS.addOnsHeroBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
+        <div className="container text-center animate-fadeInUp relative z-10">
+          <h1 className="text-5xl sm:text-6xl font-bold text-white mb-6">
             Add-ons & Decor Packages
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-gray-100 max-w-2xl mx-auto">
             Elevate your event with our curated selection of add-ons, décor packages, and services
           </p>
         </div>
@@ -17,7 +25,7 @@ export default function AddOns() {
 
       {/* Services */}
       <section className="section-padding">
-        <div className="container">
+        <div className="container px-12 sm:px-16 lg:px-20">
           <h2 className="text-4xl font-bold text-foreground mb-12 text-center animate-fadeInUp">
             Services
           </h2>
@@ -41,7 +49,7 @@ export default function AddOns() {
 
       {/* Decorations */}
       <section className="section-padding bg-gradient-to-b from-slate-50 to-white">
-        <div className="container">
+        <div className="container px-12 sm:px-16 lg:px-20">
           <h2 className="text-4xl font-bold text-foreground mb-12 text-center animate-fadeInUp">
             Decorations & Décor Items
           </h2>
@@ -65,7 +73,7 @@ export default function AddOns() {
 
       {/* Furniture */}
       <section className="section-padding">
-        <div className="container">
+        <div className="container px-12 sm:px-16 lg:px-20">
           <h2 className="text-4xl font-bold text-foreground mb-12 text-center animate-fadeInUp">
             Additional Furniture
           </h2>
@@ -90,7 +98,7 @@ export default function AddOns() {
 
       {/* Packages */}
       <section className="section-padding bg-gradient-warm">
-        <div className="container">
+        <div className="container px-12 sm:px-16 lg:px-20">
           <h2 className="text-4xl font-bold text-foreground mb-12 text-center animate-fadeInUp">
             Décor Packages
           </h2>

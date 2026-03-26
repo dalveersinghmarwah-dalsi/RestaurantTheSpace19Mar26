@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
-import { FAQ_DATA, VENUE_INFO } from '@shared/constants';
+import { FAQ_DATA, VENUE_INFO, ASSETS } from '@shared/constants';
 
 export default function Resources() {
   const [openCategories, setOpenCategories] = useState<string[]>([]);
@@ -16,12 +16,20 @@ export default function Resources() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="section-padding bg-gradient-cool border-b border-amber-100">
-        <div className="container text-center animate-fadeInUp">
-          <h1 className="text-5xl sm:text-6xl font-bold text-foreground mb-6">
+      <section
+        className="section-padding border-b border-amber-100 relative overflow-hidden"
+        style={{
+          backgroundImage: `url(${ASSETS.resourcesHeroBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
+        <div className="container text-center animate-fadeInUp relative z-10">
+          <h1 className="text-5xl sm:text-6xl font-bold text-white mb-6">
             Resources & FAQ
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-gray-100 max-w-2xl mx-auto">
             Find answers to common questions about hosting your event at The Space
           </p>
         </div>
@@ -29,7 +37,7 @@ export default function Resources() {
 
       {/* FAQ Accordion */}
       <section className="section-padding">
-        <div className="container">
+        <div className="container px-12 sm:px-16 lg:px-20">
           <div className="max-w-3xl mx-auto">
             {FAQ_DATA.map((category, categoryIndex) => (
               <div
@@ -80,7 +88,7 @@ export default function Resources() {
 
       {/* Quick Links */}
       <section className="section-padding bg-gradient-to-b from-slate-50 to-white">
-        <div className="container">
+        <div className="container px-12 sm:px-16 lg:px-20">
           <h2 className="text-4xl font-bold text-foreground mb-12 text-center animate-fadeInUp">
             Helpful Resources
           </h2>
@@ -120,7 +128,7 @@ export default function Resources() {
 
       {/* Vendor Information */}
       <section className="section-padding bg-white">
-        <div className="container">
+        <div className="container px-12 sm:px-16 lg:px-20">
           <div className="max-w-3xl mx-auto animate-fadeInUp">
             <h2 className="text-4xl font-bold text-foreground mb-8 text-center">
               Recommended Vendors
@@ -153,7 +161,7 @@ export default function Resources() {
 
       {/* Parking Information */}
       <section className="section-padding bg-gradient-cool">
-        <div className="container">
+        <div className="container px-12 sm:px-16 lg:px-20">
           <div className="max-w-3xl mx-auto animate-fadeInUp">
             <h2 className="text-4xl font-bold text-foreground mb-8 text-center">
               Parking Information

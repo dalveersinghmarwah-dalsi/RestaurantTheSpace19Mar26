@@ -1,16 +1,24 @@
 import { Check } from 'lucide-react';
-import { WHATS_INCLUDED, CAPACITY, VENUE_INFO } from '@shared/constants';
+import { WHATS_INCLUDED, CAPACITY, VENUE_INFO, ASSETS } from '@shared/constants';
 
 export default function WhatsIncluded() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="section-padding bg-gradient-cool border-b border-amber-100">
-        <div className="container text-center animate-fadeInUp">
-          <h1 className="text-5xl sm:text-6xl font-bold text-foreground mb-6">
+      <section
+        className="section-padding border-b border-amber-100 relative overflow-hidden"
+        style={{
+          backgroundImage: `url(${ASSETS.whatsIncludedHeroBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
+        <div className="container text-center animate-fadeInUp relative z-10">
+          <h1 className="text-5xl sm:text-6xl font-bold text-white mb-6">
             What's Included
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-gray-100 max-w-2xl mx-auto">
             Everything you need to host an amazing event
           </p>
         </div>
@@ -18,7 +26,7 @@ export default function WhatsIncluded() {
 
       {/* The Space */}
       <section className="section-padding">
-        <div className="container">
+        <div className="container px-12 sm:px-16 lg:px-20">
           <div className="mb-12 animate-fadeInUp">
             <h2 className="text-4xl font-bold text-foreground mb-2">The Space</h2>
             <p className="text-lg text-muted-foreground">{CAPACITY.theSpace.description}</p>
@@ -71,7 +79,7 @@ export default function WhatsIncluded() {
 
       {/* The Space Below */}
       <section className="section-padding bg-gradient-to-b from-slate-50 to-white">
-        <div className="container">
+        <div className="container px-12 sm:px-16 lg:px-20">
           <div className="mb-12 animate-fadeInUp">
             <h2 className="text-4xl font-bold text-foreground mb-2">The Space Below</h2>
             <p className="text-lg text-muted-foreground">{CAPACITY.theSpaceBelow.description}</p>
@@ -124,7 +132,7 @@ export default function WhatsIncluded() {
 
       {/* Comparison */}
       <section className="section-padding bg-white">
-        <div className="container">
+        <div className="container px-12 sm:px-16 lg:px-20">
           <h2 className="text-4xl font-bold text-foreground mb-12 text-center animate-fadeInUp">
             Space Comparison
           </h2>

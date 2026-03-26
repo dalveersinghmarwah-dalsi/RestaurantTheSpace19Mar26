@@ -1,6 +1,6 @@
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { useState } from 'react';
-import { VENUE_INFO } from '@shared/constants';
+import { VENUE_INFO, ASSETS } from '@shared/constants';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -27,12 +27,21 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero */}\n      <section className="section-padding bg-gradient-cool border-b border-amber-100">
-        <div className="container text-center animate-fadeInUp">
-          <h1 className="text-5xl sm:text-6xl font-bold text-foreground mb-6">
+      {/* Hero */}
+      <section
+        className="section-padding border-b border-amber-100 relative overflow-hidden"
+        style={{
+          backgroundImage: `url(${ASSETS.contactHeroBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
+        <div className="container text-center animate-fadeInUp relative z-10">
+          <h1 className="text-5xl sm:text-6xl font-bold text-white mb-6">
             Get In Touch
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-gray-100 max-w-2xl mx-auto">
             Have questions? We'd love to hear from you. Reach out and let's start planning your perfect event.
           </p>
         </div>
@@ -40,7 +49,7 @@ export default function Contact() {
 
       {/* Contact Info & Form */}
       <section className="section-padding">
-        <div className="container">
+        <div className="container px-12 sm:px-16 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Contact Information */}
             <div className="lg:col-span-1 space-y-8 animate-slideInLeft">
@@ -201,7 +210,7 @@ export default function Contact() {
 
       {/* Newsletter */}
       <section className="section-padding bg-gradient-warm">
-        <div className="container">
+        <div className="container px-12 sm:px-16 lg:px-20">
           <div className="max-w-2xl mx-auto text-center animate-fadeInUp">
             <h2 className="text-4xl font-bold text-foreground mb-4">Stay Updated</h2>
             <p className="text-lg text-muted-foreground mb-8">
@@ -230,7 +239,7 @@ export default function Contact() {
 
       {/* Hours & Availability */}
       <section className="section-padding bg-white">
-        <div className="container">
+        <div className="container px-12 sm:px-16 lg:px-20">
           <div className="max-w-3xl mx-auto text-center animate-fadeInUp">
             <h2 className="text-4xl font-bold text-foreground mb-8">Hours & Availability</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
